@@ -127,6 +127,26 @@ console.log(calc.sum(2, 2));
 
 // Modulos
 
-import { hello } from './module';
+//import { hello } from './module';
+
+const hello = require('./module');
+
+console.log(hello());
 
 hello();
+
+// Generators
+
+function * helloWorld () {
+    if (true) {
+        yield 'Hello, ';
+    }
+    if (true) {
+        yield 'world';
+    }
+};
+
+const generetorHello = helloWorld();
+console.log(generetorHello.next().value);
+console.log(generetorHello.next().value);
+console.log(generetorHello.next().value);
